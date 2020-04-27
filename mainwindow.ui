@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Eglon Rhuan Salazar Guimarães</author>
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1081</width>
+    <height>677</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Quanto</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="1">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>5</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustIgnored</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaLabel">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>698</width>
+         <height>580</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+            <horstretch>5</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_4">
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item row="1" column="0">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>5</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Formas</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="1" column="2">
+            <widget class="QPushButton" name="pushButtonLine">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="myresource.qrc">
+               <normaloff>:/imagens/Imgs/LineIcon.png</normaloff>:/imagens/Imgs/LineIcon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="pushButtonSelection">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="myresource.qrc">
+               <normaloff>:/imagens/Imgs/selection_rectangle-512.png</normaloff>:/imagens/Imgs/selection_rectangle-512.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QPushButton" name="pushButtonArc">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="myresource.qrc">
+               <normaloff>:/imagens/Imgs/curvaIcon.png</normaloff>:/imagens/Imgs/curvaIcon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QPushButton" name="pushButtonElispse">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="myresource.qrc">
+               <normaloff>:/imagens/Imgs/elipseIcon.png</normaloff>:/imagens/Imgs/elipseIcon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="3">
+            <widget class="QPushButton" name="pushButtonText">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="myresource.qrc">
+               <normaloff>:/imagens/Imgs/TextoIcon.png</normaloff>:/imagens/Imgs/TextoIcon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QPushButton" name="pushButtonPen">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="myresource.qrc">
+               <normaloff>:/imagens/Imgs/CanetaIcon.png</normaloff>:/imagens/Imgs/CanetaIcon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QPushButton" name="pushButtonRect">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="myresource.qrc">
+               <normaloff>:/imagens/Imgs/Rectangle-icon.png</normaloff>:/imagens/Imgs/Rectangle-icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QPushButton" name="pushButtonBackMouse">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="myresource.qrc">
+               <normaloff>:/imagens/Imgs/MousePointer.png</normaloff>:/imagens/Imgs/MousePointer.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="3">
+            <widget class="QComboBox" name="comboBoxCoresFormas">
+             <property name="currentText">
+              <string>Preto</string>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>Preto</string>
+              </property>
+              <property name="icon">
+               <iconset resource="myresource.qrc">
+                <normaloff>:/imagens/Imgs/Cores comboBox/Preto.png</normaloff>:/imagens/Imgs/Cores comboBox/Preto.png</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Branco</string>
+              </property>
+              <property name="icon">
+               <iconset resource="myresource.qrc">
+                <normaloff>:/imagens/Imgs/Cores comboBox/Branco.png</normaloff>:/imagens/Imgs/Cores comboBox/Branco.png</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Azul</string>
+              </property>
+              <property name="icon">
+               <iconset resource="myresource.qrc">
+                <normaloff>:/imagens/Imgs/Cores comboBox/azul 2111f8.png</normaloff>:/imagens/Imgs/Cores comboBox/azul 2111f8.png</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Amarelo</string>
+              </property>
+              <property name="icon">
+               <iconset resource="myresource.qrc">
+                <normaloff>:/imagens/Imgs/Cores comboBox/amarelo ffff0b.png</normaloff>:/imagens/Imgs/Cores comboBox/amarelo ffff0b.png</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Vermelho</string>
+              </property>
+              <property name="icon">
+               <iconset resource="myresource.qrc">
+                <normaloff>:/imagens/Imgs/Cores comboBox/vermelho f81111.png</normaloff>:/imagens/Imgs/Cores comboBox/vermelho f81111.png</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Verde</string>
+              </property>
+              <property name="icon">
+               <iconset resource="myresource.qrc">
+                <normaloff>:/imagens/Imgs/Cores comboBox/verde 11ff0b.png</normaloff>:/imagens/Imgs/Cores comboBox/verde 11ff0b.png</iconset>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="3">
+            <widget class="QCheckBox" name="checkBoxMostrarMedida">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Mostrar medida</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="pushButtonPolygon">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="myresource.qrc">
+               <normaloff>:/imagens/Imgs/PoligonoIcon.png</normaloff>:/imagens/Imgs/PoligonoIcon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QToolBox" name="toolBoxFuncionalidades">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>6</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>190</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="widget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>207</width>
+           <height>350</height>
+          </rect>
+         </property>
+         <attribute name="label">
+          <string>Contar particulas</string>
+         </attribute>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <property name="spacing">
+             <number>4</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QPushButton" name="pushButtonIniciarContagem">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Iniciar</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButtonPausarContagem">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Pausar</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonSalvarRelatorio">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="text">
+               <string>Salvar relatório</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonContagemAutomatica">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Contagem automática</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonReiniciarContagem">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Reiniciar contagem</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="sizeConstraint">
+               <enum>QLayout::SetNoConstraint</enum>
+              </property>
+              <item>
+               <widget class="QPushButton" name="pushButtonDeletarTipo">
+                <property name="font">
+                 <font>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="myresource.qrc">
+                  <normaloff>:/imagens/Imgs/MenosIcon.png</normaloff>:/imagens/Imgs/MenosIcon.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="labelContaParticulas">
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>true</bool>
+                </property>
+                <property name="text">
+                 <string>Tipos</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButtonAddTipo">
+                <property name="font">
+                 <font>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="myresource.qrc">
+                  <normaloff>:/imagens/Imgs/MaisIcon2.png</normaloff>:/imagens/Imgs/MaisIcon2.png</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QFrame" name="frameContaParticulas">
+              <property name="toolTip">
+               <string/>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="1" column="0">
+                <widget class="QRadioButton" name="tipo1">
+                 <property name="font">
+                  <font>
+                   <pointsize>7</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Tipo 1</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>207</width>
+           <height>350</height>
+          </rect>
+         </property>
+         <attribute name="label">
+          <string>Estereologia</string>
+         </attribute>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>14</x>
+            <y>60</y>
+            <width>177</width>
+            <height>116</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="2" column="0">
+            <widget class="QPushButton" name="pushButtonComprimentoPorUnidadeDeVolume">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Comprimento por 
+unidade de volume teste (Lv)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButtonFracaoDePontos">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Fração volumétrica 
+por fração de pontos (Pp)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="pushButtonAreaSuperficial">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Área superficial por
+unidade de volume teste (Sv)</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="">
+          <property name="geometry">
+           <rect>
+            <x>14</x>
+            <y>200</y>
+            <width>181</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QPushButton" name="pushButtonInserirLinhasHorizontais">
+             <property name="text">
+              <string>Inserir linhas horizontais</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonInserirGradeDeLinhas">
+             <property name="text">
+              <string>Inserir grade de linhas</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonInserirGradeDePontos">
+             <property name="text">
+              <string>Inserir grade de pontos</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <zorder>layoutWidget</zorder>
+         <zorder>pushButtonInserirLinhasHorizontais</zorder>
+         <zorder>pushButtonInserirGradeDeLinhas</zorder>
+         <zorder>pushButtonInserirGradeDePontos</zorder>
+         <zorder>pushButtonFracaoDePontos</zorder>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="2">
+     <widget class="QFrame" name="frame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="labelOld1">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="cursor">
+            <cursorShape>ArrowCursor</cursorShape>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelOld2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelOld3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelOld4">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelOld5">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+   <zorder>frame</zorder>
+   <zorder>scrollArea</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1081</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Arquivo">
+    <property name="title">
+     <string>&amp;Arquivo</string>
+    </property>
+    <addaction name="action_Abrir_imagem"/>
+    <addaction name="action_Salvar"/>
+    <addaction name="action_Exportar_imagem"/>
+    <addaction name="separator"/>
+    <addaction name="action_Sair"/>
+   </widget>
+   <widget class="QMenu" name="menu_Editar">
+    <property name="title">
+     <string>&amp;Editar</string>
+    </property>
+    <addaction name="action_Copiar"/>
+    <addaction name="action_Colar"/>
+    <addaction name="action_Recortar"/>
+   </widget>
+   <widget class="QMenu" name="menuFerramentas">
+    <property name="title">
+     <string>Ferramentas</string>
+    </property>
+    <widget class="QMenu" name="menu_Operacoes">
+     <property name="title">
+      <string>&amp;Operacoes</string>
+     </property>
+     <widget class="QMenu" name="menuMorfologicas">
+      <property name="title">
+       <string>Morfologicas</string>
+      </property>
+      <addaction name="actionErosao"/>
+      <addaction name="actionDilatacao"/>
+     </widget>
+     <widget class="QMenu" name="menuHistograma">
+      <property name="title">
+       <string>Histograma</string>
+      </property>
+      <addaction name="actionEqualizar"/>
+      <addaction name="actionNormalizar"/>
+      <addaction name="actionVisualizar"/>
+     </widget>
+     <widget class="QMenu" name="menuSegmentacao">
+      <property name="title">
+       <string>Segmentacao</string>
+      </property>
+      <addaction name="actionWatershed"/>
+      <addaction name="actionLimiar"/>
+      <addaction name="actionBinaria"/>
+      <addaction name="actionNegativo"/>
+      <addaction name="actionTons_de_cinza"/>
+     </widget>
+     <widget class="QMenu" name="menuAritmeticas">
+      <property name="title">
+       <string>Aritmeticas</string>
+      </property>
+      <addaction name="actionSomar"/>
+      <addaction name="actionSubtrair"/>
+     </widget>
+     <widget class="QMenu" name="menuLogicas">
+      <property name="title">
+       <string>logicas</string>
+      </property>
+      <addaction name="actionE"/>
+      <addaction name="actionN_o"/>
+      <addaction name="actionOu"/>
+      <addaction name="actionOu_exclusivo"/>
+     </widget>
+     <addaction name="menuMorfologicas"/>
+     <addaction name="menuHistograma"/>
+     <addaction name="menuSegmentacao"/>
+     <addaction name="menuAritmeticas"/>
+     <addaction name="menuLogicas"/>
+    </widget>
+    <addaction name="actionSelecionar_escala"/>
+    <addaction name="separator"/>
+    <addaction name="menu_Operacoes"/>
+    <addaction name="actionBrilhoContraste"/>
+   </widget>
+   <widget class="QMenu" name="menu_Filtros">
+    <property name="title">
+     <string>&amp;Filtros</string>
+    </property>
+    <widget class="QMenu" name="menu_Passa_Alta">
+     <property name="title">
+      <string>&amp;Passa Alta</string>
+     </property>
+     <addaction name="actionSobel"/>
+     <addaction name="actionLaplaciano"/>
+     <addaction name="actionCanny"/>
+    </widget>
+    <widget class="QMenu" name="menu_Passa_Baixa">
+     <property name="title">
+      <string>&amp;Passa Baixa</string>
+     </property>
+     <addaction name="actionMedia"/>
+     <addaction name="actionMediana"/>
+     <addaction name="actionGaussiana"/>
+    </widget>
+    <addaction name="menu_Passa_Alta"/>
+    <addaction name="menu_Passa_Baixa"/>
+   </widget>
+   <widget class="QMenu" name="menu_Zoom">
+    <property name="title">
+     <string>&amp;Imagem</string>
+    </property>
+    <addaction name="action_Proxima_imagem"/>
+    <addaction name="action_Imagem_anterior"/>
+    <addaction name="actionZoomMais"/>
+    <addaction name="actionZoomMenos"/>
+   </widget>
+   <addaction name="menu_Arquivo"/>
+   <addaction name="menu_Editar"/>
+   <addaction name="menuFerramentas"/>
+   <addaction name="menu_Filtros"/>
+   <addaction name="menu_Zoom"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBarArquivo">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Salvar"/>
+   <addaction name="action_Abrir_imagem"/>
+   <addaction name="actionSelecionar_escala"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarZoom">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Imagem_anterior"/>
+   <addaction name="action_Proxima_imagem"/>
+   <addaction name="actionZoomMais"/>
+   <addaction name="actionZoomMenos"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarFiltros">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionMedia"/>
+   <addaction name="actionMediana"/>
+   <addaction name="actionGaussiana"/>
+   <addaction name="actionSobel"/>
+   <addaction name="actionLaplaciano"/>
+   <addaction name="actionCanny"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarBrilhoContraste">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionBrilhoContraste"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarOpLogicasAritmeticas">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSomar"/>
+   <addaction name="actionSubtrair"/>
+   <addaction name="actionE"/>
+   <addaction name="actionOu"/>
+   <addaction name="actionOu_exclusivo"/>
+   <addaction name="actionN_o"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarSegmentacao">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionLimiar"/>
+   <addaction name="actionBinaria"/>
+   <addaction name="actionTons_de_cinza"/>
+   <addaction name="actionWatershed"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarHistograma">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionEqualizar"/>
+   <addaction name="actionVisualizar"/>
+   <addaction name="actionNormalizar"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarMorfologicas">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionErosao"/>
+   <addaction name="actionDilatacao"/>
+  </widget>
+  <action name="action_Abrir_imagem">
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/open-file.png</normaloff>:/imagens/Imgs/open-file.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Abrir imagem</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_Salvar">
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/SaveIcon.png</normaloff>:/imagens/Imgs/SaveIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Salvar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_Sair">
+   <property name="text">
+    <string>&amp;Sair</string>
+   </property>
+  </action>
+  <action name="action_Copiar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Copiar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_Colar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Colar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="action_Recortar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Recortar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionErosao">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Erosão.png</normaloff>:/imagens/Imgs/Erosão.png</iconset>
+   </property>
+   <property name="text">
+    <string>Erosão</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionDilatacao">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Dilatação.png</normaloff>:/imagens/Imgs/Dilatação.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dilatação</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionEqualizar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Equalizar.png</normaloff>:/imagens/Imgs/Equalizar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Equalizar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionNormalizar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Normalizar.png</normaloff>:/imagens/Imgs/Normalizar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Normalizar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionVisualizar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/visualizar.png</normaloff>:/imagens/Imgs/visualizar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Visualizar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionBrilhoContraste">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/brilho.png</normaloff>:/imagens/Imgs/brilho.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Brilho e contraste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionWatershed">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Watershed.png</normaloff>:/imagens/Imgs/Watershed.png</iconset>
+   </property>
+   <property name="text">
+    <string>Watershed</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionFindContourns">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>FindContourns</string>
+   </property>
+  </action>
+  <action name="actionLimiar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Lim.png</normaloff>:/imagens/Imgs/Lim.png</iconset>
+   </property>
+   <property name="text">
+    <string>Limiar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionBinaria">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Bin.png</normaloff>:/imagens/Imgs/Bin.png</iconset>
+   </property>
+   <property name="text">
+    <string>Binaria</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionPassa_alta">
+   <property name="text">
+    <string>&amp;Passa alta</string>
+   </property>
+  </action>
+  <action name="action_Passa_baixa">
+   <property name="text">
+    <string>&amp;Passa baixa</string>
+   </property>
+  </action>
+  <action name="actionSobel">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Sobel.png</normaloff>:/imagens/Imgs/Sobel.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Sobel</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actionLaplaciano">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/laplaciano.png</normaloff>:/imagens/Imgs/laplaciano.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Laplaciano</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="actionCanny">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Canny.png</normaloff>:/imagens/Imgs/Canny.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Canny</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
+   </property>
+  </action>
+  <action name="actionMedia">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Média.png</normaloff>:/imagens/Imgs/Média.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Média</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+4</string>
+   </property>
+  </action>
+  <action name="actionMediana">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Mediana.png</normaloff>:/imagens/Imgs/Mediana.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Mediana</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="actionGaussiana">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Gaussiana.png</normaloff>:/imagens/Imgs/Gaussiana.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Gaussiana</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actionNegativo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Not.png</normaloff>:/imagens/Imgs/Not.png</iconset>
+   </property>
+   <property name="text">
+    <string>Negativo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionTons_de_cinza">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Gray.png</normaloff>:/imagens/Imgs/Gray.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tons de cinza</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionSomar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Somar.png</normaloff>:/imagens/Imgs/Somar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Somar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionSubtrair">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Subtrair.png</normaloff>:/imagens/Imgs/Subtrair.png</iconset>
+   </property>
+   <property name="text">
+    <string>Subtrair</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionE">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/E.png</normaloff>:/imagens/Imgs/E.png</iconset>
+   </property>
+   <property name="text">
+    <string>E</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionOu">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Ou.png</normaloff>:/imagens/Imgs/Ou.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ou</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+5</string>
+   </property>
+  </action>
+  <action name="actionOu_exclusivo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Xor.png</normaloff>:/imagens/Imgs/Xor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ou exclusivo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+6</string>
+   </property>
+  </action>
+  <action name="actionN_o">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Not.png</normaloff>:/imagens/Imgs/Not.png</iconset>
+   </property>
+   <property name="text">
+    <string>Não</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+7</string>
+   </property>
+  </action>
+  <action name="actionZoomMais">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/zoom-in.png</normaloff>:/imagens/Imgs/zoom-in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom +</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl++</string>
+   </property>
+  </action>
+  <action name="actionZoomMenos">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/zoom-out.png</normaloff>:/imagens/Imgs/zoom-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom -</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actionSelecionar_escala">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/Escala.png</normaloff>:/imagens/Imgs/Escala.png</iconset>
+   </property>
+   <property name="text">
+    <string>Selecionar escala</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="action_Proxima_imagem">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/export-green.png</normaloff>:/imagens/Imgs/export-green.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Próxima imagem</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+&gt;</string>
+   </property>
+  </action>
+  <action name="action_Imagem_anterior">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="myresource.qrc">
+     <normaloff>:/imagens/Imgs/import.png</normaloff>:/imagens/Imgs/import.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Imagem anterior</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+&lt;</string>
+   </property>
+  </action>
+  <action name="action_Exportar_imagem">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Exportar imagem</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="myresource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

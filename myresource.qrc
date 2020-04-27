@@ -1,0 +1,53 @@
+<RCC>
+    <qresource prefix="/imagens">
+        <file>Imgs/export-green.png</file>
+        <file>Imgs/import.png</file>
+        <file>Imgs/open-file.png</file>
+        <file>Imgs/SaveIcon.png</file>
+        <file>Imgs/zoom-in.png</file>
+        <file>Imgs/zoom-out.png</file>
+        <file>Imgs/CanetaIcon.png</file>
+        <file>Imgs/curvaIcon.png</file>
+        <file>Imgs/elipseIcon.png</file>
+        <file>Imgs/LineIcon.ico</file>
+        <file>Imgs/MousePointer.png</file>
+        <file>Imgs/PoligonoIcon.png</file>
+        <file>Imgs/Rectangle-icon.png</file>
+        <file>Imgs/selection_rectangle-512.png</file>
+        <file>Imgs/TextoIcon.png</file>
+        <file>Imgs/MaisIcon.png</file>
+        <file>Imgs/MenosIcon.png</file>
+        <file>Imgs/MaisIcon2.png</file>
+        <file>Imgs/Dilatação.png</file>
+        <file>Imgs/Canny.png</file>
+        <file>Imgs/E.png</file>
+        <file>Imgs/Erosão.png</file>
+        <file>Imgs/Gaussiana.png</file>
+        <file>Imgs/laplaciano.png</file>
+        <file>Imgs/Média.png</file>
+        <file>Imgs/Mediana.png</file>
+        <file>Imgs/Not.png</file>
+        <file>Imgs/Ou.png</file>
+        <file>Imgs/Sobel.png</file>
+        <file>Imgs/Somar.png</file>
+        <file>Imgs/Subtrair.png</file>
+        <file>Imgs/Xor.png</file>
+        <file>Imgs/Tons de cinza.png</file>
+        <file>Imgs/Gray.png</file>
+        <file>Imgs/Bin.png</file>
+        <file>Imgs/Lim.png</file>
+        <file>Imgs/Watershed.png</file>
+        <file>Imgs/Equalizar.png</file>
+        <file>Imgs/Normalizar.png</file>
+        <file>Imgs/visualizar.png</file>
+        <file>Imgs/Escala.png</file>
+        <file>Imgs/brilho.png</file>
+        <file>Imgs/Cores comboBox/azul 2111f8.png</file>
+        <file>Imgs/Cores comboBox/amarelo ffff0b.png</file>
+        <file>Imgs/Cores comboBox/Branco.png</file>
+        <file>Imgs/Cores comboBox/Preto.png</file>
+        <file>Imgs/Cores comboBox/verde 11ff0b.png</file>
+        <file>Imgs/Cores comboBox/vermelho f81111.png</file>
+        <file>Imgs/LineIcon.png</file>
+    </qresource>
+</RCC>

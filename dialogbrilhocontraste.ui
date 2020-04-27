@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogBrilhoContraste</class>
+ <widget class="QDialog" name="DialogBrilhoContraste">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>424</width>
+    <height>335</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ajuste de brilho e contraste</string>
+  </property>
+  <widget class="QLabel" name="labelValorContraste">
+   <property name="geometry">
+    <rect>
+     <x>406</x>
+     <y>44</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>87</x>
+     <y>299</y>
+     <width>176</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSliderBrilho">
+   <property name="geometry">
+    <rect>
+     <x>87</x>
+     <y>9</y>
+     <width>311</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-127</number>
+   </property>
+   <property name="maximum">
+    <number>127</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelBrilho">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>45</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Brilho:</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSliderContraste">
+   <property name="geometry">
+    <rect>
+     <x>87</x>
+     <y>44</y>
+     <width>311</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>0</number>
+   </property>
+   <property name="maximum">
+    <number>127</number>
+   </property>
+   <property name="singleStep">
+    <number>1</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelValorBrilho">
+   <property name="geometry">
+    <rect>
+     <x>406</x>
+     <y>9</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelContraste">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>44</y>
+     <width>72</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Contraste:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelBrilhoContraste">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>87</x>
+     <y>79</y>
+     <width>311</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>DialogBrilhoContraste</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>DialogBrilhoContraste</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
