@@ -42,8 +42,8 @@ void DialogSegmentacao::inicializarDialog(){
 
     imagemAux = imagem;
 
-    cvtColor(imagemAux,imagemAux,CV_BGR2GRAY);
-    cvtColor(imagemAux,imagemAux,CV_GRAY2BGR);
+    cvtColor(imagemAux,imagemAux,COLOR_BGR2GRAY);
+    cvtColor(imagemAux,imagemAux,COLOR_GRAY2BGR);
 
     histograma = obterHistograma(imagemAux);
 
@@ -71,9 +71,9 @@ void DialogSegmentacao::on_horizontalSliderSegmentacao_valueChanged(int value)
         return;
     }
 
-    cvtColor(imagemAux,imagemAux,CV_BGR2GRAY);
+    cvtColor(imagemAux,imagemAux,COLOR_BGR2GRAY);
     threshold(imagemAux, imagemAux, value, 255, tipoOperacao );
-    cvtColor(imagemAux,imagemAux,CV_GRAY2BGR);
+    cvtColor(imagemAux,imagemAux,COLOR_GRAY2BGR);
 
     qImage = matToQImage(imagemAux);
     ui->labelPrevia->setPixmap(QPixmap::fromImage(qImage));

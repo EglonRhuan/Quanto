@@ -430,11 +430,11 @@ void MainWindow::on_actionCanny_triggered()
     qimage = ui->label->pixmap()->toImage();
     imagem = qImageToMat(qimage);
 
-    cvtColor( imagem, imagem, CV_BGR2GRAY );
+    cvtColor( imagem, imagem, COLOR_BGR2GRAY );
 
     Canny(imagem,imagem,0,0,abertura,false);
 
-    cvtColor( imagem, imagem, CV_GRAY2BGR );
+    cvtColor( imagem, imagem, COLOR_GRAY2BGR );
 
     this->showImage(imagem);
 
@@ -464,7 +464,7 @@ void MainWindow::on_actionLaplaciano_triggered()
     qimage = ui->label->pixmap()->toImage();
     src = qImageToMat(qimage);
 
-    cvtColor( src, src, CV_RGB2GRAY );
+    cvtColor( src, src, COLOR_RGB2GRAY );
     GaussianBlur(src,src,Size(kValue,kValue),0,0,BORDER_DEFAULT);
 
     Laplacian(src,dst,CV_16S,3,1,0,BORDER_DEFAULT);
@@ -472,7 +472,7 @@ void MainWindow::on_actionLaplaciano_triggered()
     convertScaleAbs( dst, dst);
 
 
-    cvtColor( dst, dst, CV_GRAY2BGR );
+    cvtColor( dst, dst, COLOR_GRAY2BGR );
 
     this->showImage(dst);
     //cvReleaseImage(&imagem);
@@ -503,7 +503,7 @@ void MainWindow::on_actionSobel_triggered()
     qimage = ui->label->pixmap()->toImage();
     imagem = qImageToMat(qimage);
 
-    cvtColor( imagem, imagem, CV_RGB2GRAY );
+    cvtColor( imagem, imagem, COLOR_RGB2GRAY );
     Sobel(imagem, img_x, CV_16S, 0, 1, kValue, 1, 0, BORDER_DEFAULT );
 
     Sobel(imagem, img_y, CV_16S, 1, 0, kValue, 1, 0, BORDER_DEFAULT );
@@ -513,7 +513,7 @@ void MainWindow::on_actionSobel_triggered()
 
     addWeighted( img_x, 0.5, img_y, 0.5, 0, imagem);
 
-    cvtColor( imagem, imagem, CV_GRAY2BGR );
+    cvtColor( imagem, imagem, COLOR_GRAY2BGR );
 
     this->showImage(imagem);
 
@@ -573,12 +573,12 @@ void MainWindow::on_actionEqualizar_triggered()
     qimage = ui->label->pixmap()->toImage();
     imagem = qImageToMat(qimage);
 
-    cvtColor( imagem, imagem, CV_BGR2GRAY );
+    cvtColor( imagem, imagem, COLOR_BGR2GRAY );
 
     equalizeHist( imagem, imagem );
 
 
-    cvtColor( imagem, imagem, CV_GRAY2BGR );
+    cvtColor( imagem, imagem, COLOR_GRAY2BGR );
 
     this->showImage(imagem);
 }
@@ -720,7 +720,7 @@ void MainWindow::on_actionVisualizar_triggered()
     imagem = obterHistograma(imagem);
 
       /// Display
-      namedWindow("Histograma", CV_WINDOW_NORMAL);
+      namedWindow("Histograma", WINDOW_NORMAL);
       moveWindow("Histograma",500,100 );
       imshow("Histograma", imagem );
 
@@ -764,8 +764,8 @@ void MainWindow::on_actionTons_de_cinza_triggered()
     qimage = ui->label->pixmap()->toImage();
     imagem = qImageToMat(qimage);
 
-    cvtColor( imagem, imagem, CV_RGB2GRAY );
-    cvtColor(imagem, imagem, CV_GRAY2BGR);
+    cvtColor( imagem, imagem, COLOR_RGB2GRAY );
+    cvtColor(imagem, imagem, COLOR_GRAY2BGR);
 
 
     this->showImage(imagem);
@@ -1758,7 +1758,7 @@ void MainWindow::on_pushButtonCalcularPorosidade_clicked()
 
     matImg = qImageToMat(imagem);
 
-    cvtColor( matImg, matImg, CV_RGB2GRAY );
+    cvtColor( matImg, matImg, COLOR_RGB2GRAY );
 
     for (int i=0;i<matImg.rows;i++){
         for (int j; j< matImg.cols;j++){

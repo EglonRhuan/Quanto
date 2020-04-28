@@ -5,6 +5,12 @@
 //#include "opencv/cv.h"
 #include <QBytearray>
 #include "qbuffer.h"
+#include <iostream>
+
+#include "opencv2/opencv.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/core/core.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
 
 
 using namespace cv;
@@ -29,7 +35,7 @@ Mat obterHistograma(Mat &imagem){
 
     int from_to[] = { 0,0, 1,0, 2,0 };
     mixChannels( &imagem, 1, out, 2, from_to, 3 );
-    cvtColor(out[0],out[0],CV_BGR2GRAY);
+    cvtColor(out[0],out[0], COLOR_BGR2GRAY);
     calcHist( &out[0], 1, 0, Mat(), b_hist, 1, &histSize, &histRange, uniform, accumulate );
     calcHist( &out[0], 1, 0, Mat(), g_hist, 1, &histSize, &histRange, uniform, accumulate );
     calcHist( &out[0], 1, 0, Mat(), r_hist, 1, &histSize, &histRange, uniform, accumulate );
@@ -104,7 +110,7 @@ Mat obterHistograma(Mat &imagem){
 */
 QImage matToQImage(Mat const& src) {
     cv::Mat temp; // make the same cv::Mat
-    cvtColor(src, temp,CV_BGR2RGB); // cvtColor Makes a copt, that what i need
+    cvtColor(src, temp,COLOR_BGR2RGB); // cvtColor Makes a copt, that what i need
     QImage dest((const uchar *) temp.data, temp.cols, temp.rows, temp.step, QImage::Format_RGB888);
     dest.bits(); // enforce deep copy, see documentation
     // of QImage::QImage ( const uchar * data, int width, int height, Format format )
@@ -131,14 +137,14 @@ QList<QPoint> encontrarParticulas(QImage imgOriginal, QImage Qtempl, double limi
     QPoint posicao;
     QList<QPoint> listaPosicoes;
 
-    matchTemplate(matImg,templ,result,CV_TM_CCORR_NORMED);   
+    matchTemplate(matImg,templ,result, TM_CCORR_NORMED);
 
     normalize( result, result, 0, 1, NORM_MINMAX, -1);
 
 
     //Aqui e feita uma normalizacao do limiar, ele e dividido por 200 pq este e o numero maximo do horizontalSlider
     limiar = double(limiar/100);
-    threshold(result, result, limiar, 1., CV_THRESH_TOZERO);
+    threshold(result, result, limiar, 1., THRESH_TOZERO);
 
 
     while (true)
