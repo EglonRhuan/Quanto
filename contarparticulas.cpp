@@ -13,6 +13,7 @@
 #include <QtCore/QFile>
 #include "QMessageBox"
 #include <dirent.h>
+#include <QDir>
 
 
 
@@ -200,40 +201,44 @@ void ContarParticulas::mudarImagem(QImage img, QString nomeArquivo){
 
 void ContarParticulas::exportarDados(QString caminho){
 
-    DIR *dir;
-    struct dirent *lsdir;
-    char *charNomeArquivo;
+
     quantoTp projetoCorrente;
+    QDir dir(caminho);
+    QString ColunaNoRelatorio = "BCDEFGHIJK";
+    QFile f( caminho + "/relatorio.csv");
     QString nomeArquivo, nomesTiposAux[10], nomesTiposAnterior[10], pularLinha;
     QStringList listaDadosAnalise, listaTipos, listaCabecalho, dadosCadaPonto;
     int idTipo, pontosPorTipo[10], quantArquivos = 0;
 
-    QString ColunaNoRelatorio = "BCDEFGHIJK";
-    QFile f( caminho + "/relatorio.csv");
 
-    dir = opendir(caminho.toStdString().c_str());
-    if (dir == 0) {
-            QMessageBox::information(NULL, "Erro ao abrir diretório","Não foi possivel abrir o diretório.");
-            exit (1);
+    QStringList listaArquivos = dir.entryList();
+
+
+
+    if (!dir.exists()){
+        QMessageBox::information(NULL, "Erro ao abrir a pasta","Não foi possivel abrir a pasta.");
+        exit (1);
     }
 
+    if (listaArquivos.isEmpty()){
+        QMessageBox::information(NULL, "Falha ao encontrar arquivos","Não foi encontrado nenhum arquivo .qto na pasta selecionada");
+        exit (1);
+    }
 
     if( f.open( QIODevice::WriteOnly ) ){
         QTextStream ts( &f );
         ts << "Imagem";
-    // Percorre os arquivos do caminho        
-        while ( ( lsdir = readdir(dir) ) != NULL ){
-            charNomeArquivo = lsdir->d_name;
-            nomeArquivo = charNomeArquivo;            
+    // Percorre os arquivos do caminho
+        for(int i=0; i<listaArquivos.length();i++ ){
+
+            nomeArquivo = listaArquivos.at(i);
             if (nomeArquivo.right(3) == "qto"){
 
-                projetoCorrente = getDadosProjeto(caminho + "/" + charNomeArquivo);
+                projetoCorrente = getDadosProjeto(caminho + "/" + nomeArquivo);
                 listaDadosAnalise = projetoCorrente.dadosAnalise.split(";");
-                listaCabecalho = listaDadosAnalise.at(0).split("*");                
+                listaCabecalho = listaDadosAnalise.at(0).split("*");
 
                 listaTipos = listaCabecalho.at(2).split("-");
-
-
 
 
                 for (int i = 0; i<10;i++){
@@ -264,7 +269,7 @@ void ContarParticulas::exportarDados(QString caminho){
                         }
                         nomesTiposAnterior[i] = nomesTiposAux[i];
                     }
-                    //a variável pular linha é uma gambiarra pra pular a linha só quando se escreve um tipo diferente                    
+                    //a variável pular linha é uma gambiarra pra pular a linha só quando se escreve um tipo diferente
                     ts << pularLinha;
                     pularLinha = "";
 
@@ -276,7 +281,7 @@ void ContarParticulas::exportarDados(QString caminho){
                     ts << "\n";
                     quantArquivos++;
 
-            }            
+            }
         }
         //inclusÃ£o da soma das contagens em cada coluna do relatório
         ts << "Total;";
@@ -285,8 +290,8 @@ void ContarParticulas::exportarDados(QString caminho){
                  ts << "=soma(" + QString(ColunaNoRelatorio.at(i)) +"2:" + QString(ColunaNoRelatorio.at(i)) + QString::number(quantArquivos+1) + ");" ;
             }
         }
-        //inclusÃ£o do desvio padrÃ£o das contagens em cada coluna do relatÃ³rio
-        ts << "\nDesvio PadrÃ£o;";
+        //inclusÃ£o do desvio padrão das contagens em cada coluna do relatório
+        ts << "\nDesvio Padrão;";
         for (int i=0; i<10 ;i++){
             if(nomesTiposAux[i]!=""){
                  ts << "=DESVPAD(" + QString(ColunaNoRelatorio.at(i)) +"2:" + QString(ColunaNoRelatorio.at(i)) + QString::number(quantArquivos+1) + ");" ;
@@ -302,17 +307,12 @@ void ContarParticulas::exportarDados(QString caminho){
     }
 
 
-    closedir(dir);
-
-
     //caminhoArquivo = QFileDialog::getSaveFileName(this, tr("Salvar relatório..."), QString(), tr("Arquivos CSV(*.csv)"));
 
 
-
-
-
-
            f.close();
+
+
 }
 
 QString ContarParticulas::getListaPontos(){
